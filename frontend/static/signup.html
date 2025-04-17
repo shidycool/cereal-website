@@ -15,12 +15,35 @@
                     <img src="../../assets/Milletseeds_1200x1200-removebg-preview.png" alt="">
                 </div>
                 <div class="inputfields">
-                    <fieldset>
-                        <label for="f_name">First name:</label>
-                        <input type="text" id="f_name" name="f_name">
-                    </fieldset>
+                    <form action="./../../backend/signup.php" method="post">
+                        <fieldset>
+                            <label for="f_name">First name:</label>
+                            <input type="text" id="f_name" name="f_name" required>
+                        </fieldset>
+                
+                        <fieldset>
+                            <label for="l_name">Last name:</label>
+                            <input type="text" id="l_name" name="l_name">
+                        </fieldset>
+
+                        <fieldset>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </fieldset>
+
+                        <fieldset>
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" required>
+                        </fieldset>
+
+                        <button class="btn" type="submit" id="btn">Submit</button>
+                        <p>Have an account,&nbsp<a href="signin.html">Sign in Here</p>
+                    </form>
                 </div>
+            
             </div>
+            
+            
         </div>
     </div>
 </body>

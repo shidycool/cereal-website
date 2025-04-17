@@ -1,0 +1,260 @@
+/* body {
+  margin: 0;
+  padding: 0;
+  background: #fff6f6;
+  padding: 1rem;
+} */
+
+.product-page-container{
+  display: flex;
+  flex-direction: column;
+}
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  width: 100%;
+}
+
+.logo {
+  font-weight: bold;
+}
+
+.navbar-end{
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar-end fieldset{
+  padding: .5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  display: flex;
+}
+
+.navbar-end input{
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.navbar-end fieldset img{
+  color: #D9D9D9;
+}
+.navbar-end .user-account{
+  align-self: flex-start;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: .2rem;
+}
+.navbar-end .user-account span{
+  background: #D9D9D9;
+  padding: .5rem;
+  border-radius: 50%;
+}
+.navbar-end .user-account i{
+  align-self: center;
+}
+
+.navbar-end .cart{
+  display: flex;
+  align-self: center;
+  padding: .6rem .8rem;
+  gap: .2rem;
+  background: #D9D9D9;
+}
+
+.navbar-end .cart span{
+  align-self: flex-end;
+}
+.item-discount {
+  display: flex;
+  padding: 20px;
+  gap: 4.6rem;
+  max-width: 70%;
+  margin: auto;
+}
+
+.discount-part{
+  width: 57.5%;
+  background-color: #F4F3F3;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #1E1E1E15;
+  position: relative;
+}
+
+.discount-part::before, .discount-part::after{
+  content: "";
+  width: 70px;
+  height: 70px;
+  top: 30%;
+  position: absolute;
+  background: var(--primary-color);
+  z-index: 11;
+  border-radius: 50%;
+  /* border: 1.5px solid #1E1E1E15; */
+}
+
+.discount-part::before{
+  left: -35px;
+  
+}
+
+.discount-part::after{
+  right: -35px;
+}
+.discount-part .top{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  align-items: center;
+  padding: 1rem 1.6rem;
+}
+
+.discount-part .top h3{
+  max-width: 90%;
+  font-size: 24px;
+}
+.discount-part .date {
+  padding: .8rem 4rem;
+  background-color: var(--primary-color);
+  font-weight: bold;
+  border-radius: 2rem;
+}
+
+.btn {
+  height: 40px;
+  background-color:#D9D9D9;
+  border: none;
+  color: #FFF8F8;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.promotion {
+  flex: 0 0 230px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: .4rem 0;
+}
+
+.promotion p{
+  font-size: 15px;
+}
+.promotion-btn {
+  align-self: flex-start;
+  background-color: black;
+  color: white;
+  padding: 10px 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.products {
+  padding: 12px;
+  background: white;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.products-title{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  max-width: 60%;
+  padding: .4rem 2rem;
+  height: 53px;
+}
+.products h2{
+  align-self: flex-start;
+  justify-content: center;
+}
+
+.top-rank {
+  align-self: flex-end;
+  font-style: italic;
+}
+
+.product-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  flex-direction: row;
+  overflow-x: auto;
+}
+
+.individual-products {
+  background: #F7F6F6;;
+  border-radius: 10px;
+  padding: 6px 20px;
+  width: fit-content;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+  align-self: flex-start;
+}
+.individual-products img{
+  width: 180px;
+}
+
+.price{
+  background: #FFF0F0;
+  padding: .8rem 2.2rem;
+  border-radius: 5px;
+}
+.price{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.price .price-details{
+  display: flex;
+  gap: .4rem;
+}
+.price .price-details span:first-child{
+  color: black;
+}
+.price .price-details span:last-child{
+  color: red;
+  font-weight: bold;
+}
+.price .unit{
+  color: grey;
+  font-weight: 200;
+}
+.product-container .details{
+  display: flex;
+  gap: .6rem;
+}
+.metadata{
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+}
+.metadata label{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.metadata label span:first-child{
+  color: red;
+}
+.metadata label span:last-child{
+  color: green;
+}
+.addToCart{
+  background: black;
+  color: var(--primary-color);
+  padding: .8rem 0;
+  border-radius: 5px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}

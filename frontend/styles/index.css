@@ -8,9 +8,9 @@
     src: url('../../assets/Inter/static/Inter_18pt-Regular.ttf') format('truetype');
     font-style: normal;
 }
-/* :root{
-    --primary-font: 'inter';
-} */
+:root{
+    --primary-color: #FFF8F8;
+}
 
 body{
     background: white;
@@ -21,7 +21,6 @@ body{
     font-family: 'inter';
 }
 .container{
-    padding: 1rem;
     background: #FFF8F8;
     height: 97%;
 }
@@ -133,7 +132,7 @@ body{
     background: #FFFFFF77;
     z-index: 1;
 }
-.authContainer .flex .inputfields{
+.authContainer .flex .inputfields form{
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -156,3 +155,47 @@ body{
     outline: none;
     width: 100%;
 }
+.btn{
+    width: 100%;
+    height: 30px;
+    margin-top: 10px; 
+}
+.inputfields p{
+    display: flex;
+    margin-top: 24px;
+    align-self: center;
+}
+.inputfields a:visited, .inputfields a:hover{
+    color: blue;
+}
+.signinInput{
+    margin: auto;
+}
+/*Sign in styling
+.auth-Container{
+    background: #FFF8F8;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.auth-Container .authTitle2{
+display: flex;
+flex-direction: column;
+align-self: center;
+}
+.auth-Container .authTitle2 .inputfield{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 1rem;
+}
+
+
+.auth-Container .authTitle2 .inputfield .flex2{
+    outline: 0;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-self: center; 
+}
+*/
