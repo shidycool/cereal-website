@@ -12,7 +12,7 @@
   $con = mysqli_connect($servername, $username, '', $database);
 
   if($con->connect_error){
-    echo "connectiom problem: ".$conn->connect_error;
+    echo "connection problem: ".$conn->connect_error;
     exit();
   }
 
@@ -21,9 +21,13 @@
 
   $res = mysqli_query($con, $sql);
   if($res){
-    echo "The data was submitted successfully";
+    echo "Sign up succesfull, Please sign in";
+    ?>
+    <meta http-equiv="refresh" content="1; url='../frontend/static/signin.html'"/>
+    <?php
   }
   else{
     echo "Data not submitted";
   }
+  $con -> close();
 ?>
