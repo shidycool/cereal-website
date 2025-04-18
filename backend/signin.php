@@ -16,8 +16,8 @@
     exit();
   }
 
-  //retrieving details that already exist from db
-  $sql = "SELECT id, email, pass FROM users_info";
+  //retrieving details from db
+  $sql = "SELECT id, email,first_name, last_name, pass FROM users_info";
 
   $result = mysqli_query($con, $sql);
 
@@ -27,12 +27,19 @@
       $userId = $row['id'];
       $s_email = $row['email'];
       $s_password = $row['pass'];
+      $fname = $row['first_name'];
+      $lname = $row['last_name'];
     }
 
     //authentication process
     if($email == $s_email && $password == $s_password){
       $_SESSION['id'] = $userId;
-      echo"Details matched";
+      $initials = substr($fname, 0, 1).substr($lname, 0, 1);
+      $_SESSION['initial'] = $initials;
+      echo"Log in successfull, redirecting";
+      ?>
+      <meta http-equiv="refresh" content="1; url='../backend/product.php'"/>
+      <?php
     }
     else{
       echo"Try again";
@@ -41,3 +48,5 @@
   else{
     echo"User does not exist, please create new account";
   }
+
+  $con -> close();

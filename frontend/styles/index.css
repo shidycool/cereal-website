@@ -8,6 +8,11 @@
     src: url('../../assets/Inter/static/Inter_18pt-Regular.ttf') format('truetype');
     font-style: normal;
 }
+@font-face {
+    font-family: 'logotext';
+    src: url('../../assets/Jacquarda_Bastarda_9/JacquardaBastarda9-Regular.ttf') format('truetype');
+    font-style: normal;
+}
 :root{
     --primary-color: #FFF8F8;
 }
@@ -20,6 +25,12 @@ body{
     margin: .5rem auto;
     font-family: 'inter';
 }
+.logo {
+    font-weight: bold;
+    font-family: 'logotext';
+    max-width: 131px;
+    font-size: 20px;
+  }
 .container{
     background: #FFF8F8;
     height: 97%;
@@ -87,7 +98,6 @@ body{
 }
 .center button{
     align-self: center;
-    padding: .1rem 4.9rem;
     font-size: 20px;
     background-color: black;
     color: #FFF8F8;
@@ -170,6 +180,13 @@ body{
 }
 .signinInput{
     margin: auto;
+}
+.boostBtn a, .boostBtn a:visited, .boostBtn a:hover, .boostBtn a:active{
+    text-decoration: none;
+    color: inherit;
+}
+.boostBtn a{
+    padding: .1rem 4.9rem;
 }
 /*Sign in styling
 .auth-Container{
