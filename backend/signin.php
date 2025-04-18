@@ -4,9 +4,10 @@
   $username = "root";
   $database = "cereal_db";
 
-  //User details
-  $email = $_POST['email'];
-  $password = $_POST['password'];
+  //Accessing User details from the frontend
+  $email = htmlspecialchars($_POST['email']);
+  $password = htmlspecialchars($_POST['password']);
+
 
   //connection testing
   $con = mysqli_connect($servername, $username, '', $database );
@@ -15,7 +16,7 @@
     exit();
   }
 
-  //retrieving details from db
+  //retrieving details that already exist from db
   $sql = "SELECT id, email, pass FROM users_info";
 
   $result = mysqli_query($con, $sql);
@@ -38,5 +39,5 @@
     }
   }
   else{
-    echo"User does not exust, please create new account";
+    echo"User does not exist, please create new account";
   }
